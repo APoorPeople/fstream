@@ -1,0 +1,75 @@
+/*#include<iostream.h>
+#include<fstream.h>
+#include<stdlib.h>
+int main(void)
+{
+	fstream in;
+	in.open("f1.txt",ios::in);
+	if(!in)
+	{
+		cerr<<"f1.txt can't open.\n";
+		abort();
+	}
+	char s[80];
+	while(!in.eof())
+	{
+		in.getline(s,sizeof(s));
+		cout<<s<<endl;
+	}
+	in.close();
+}*/
+/*#include<iostream.h>
+#include<fstream.h>
+#include<stdlib.h>
+int main(void)
+{
+	fstream infile,outfile;
+	infile.open ("f2.txt",ios::in);
+	if(!infile)
+	{
+		cerr<<"f2.txt can't open.\n";
+		abort();
+	}
+	outfile.open ("f3.txt",ios::out);
+	if(!outfile)
+	{
+		cerr<<"f3.txt can't open.\n";
+		abort();
+	}
+	char ch;
+	while(infile.get(ch))
+		outfile.put(ch);
+	infile.close();
+}*/
+/*#include<iostream.h>
+#include<fstream.h>
+#include<stdlib.h>
+int main(void)
+struct person
+{
+	char name[20];
+	double height;
+	unsigned short age;
+};
+struct person people[5]={"Li",1.88,35,"Hu",1.91,25,"Gao",1.75,33,"Mao",1.72,32,"Lu",1.69,50};
+
+
+int main(void)
+{
+	fstream file;
+	filr.open("f5.dat",ios::init|ios::out|ios::binary);
+	if(!file)
+	{
+		cerr<<"f5.dat can't open.\n";
+		abort();
+	}
+	for(int i(0);i<5;i++)
+		file.write ((char *)&people[i],sizeof(people[i]));
+	file.seekp(0,ios::beg);
+	for(i=0;i<5;i++)
+	{
+		file.read ((char *)&people[i],sizeof(people[i]));
+		cout<<people[i].name <<'\t'<<people[i].height <<'\t'<<people[i].age <<endl;
+	}
+	file.close();
+}*/
